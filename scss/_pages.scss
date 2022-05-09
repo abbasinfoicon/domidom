@@ -1,0 +1,1042 @@
+/*=====================================================================
+==========================   Pourquoi-nous-choisir-Page  =========================
+========================================================================*/
+
+
+//pourquoi-service
+.pourquoi-service {
+  padding: 32px 33px 46px;
+
+  .media {
+    .media-left {
+      padding-right: 32px;
+    }
+  }
+
+  h4 {
+    @include mq(min, 1199) {
+      font-size: 22.8px;
+    }
+
+    span {
+      @include mq(min, 1199) {
+        font-size: 37.81px;
+      }
+    }
+  }
+
+  .en-savoir-plus.en-savoir2 {
+    a {
+      @include mq(min, 1199) {
+        font-size: 16.49px;
+        @include roboto(bolder);
+        border: 3px solid $dgreen;
+        padding: 5px 47px;
+      }
+    }
+  }
+}
+
+//banner-content
+.bnr-content {
+  padding: 30px;
+
+  h4 {
+    @include roboto(bold);
+    color: $white;
+    font-size: 22.8px;
+    text-transform: uppercase;
+  }
+}
+
+//pourquoi-section
+.pourquoi-section {
+  @include full-width;
+  background-color: $lightgray;
+  margin-bottom: 65px;
+
+  .faites-une {
+    margin-top: 70px;
+
+    @include mq(max, 991) {
+      margin-top: 15px;
+    }
+  }
+
+  .paddingLeft0 {
+    @include mq(min, 992) {
+      .col-md-3 {
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      .col-md-9 {
+        padding-left: 0px;
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+//nos-agences
+.nos-agences {
+  @include full-width;
+  padding: 30px 0 80px;
+  background: $lightgray;
+
+  .article-heading {
+    margin-top: 54px;
+
+    p {
+      margin-bottom: 22px;
+    }
+
+    .btn-aides {
+      margin-bottom: 62px;
+
+      a {
+        padding: 7px 0px 3px 51px;
+        width: 100%;
+        font-size: 15px;
+        min-height: 80px;
+
+        span {
+          @include roboto(normal);
+        }
+
+        img {
+          width: auto;
+          left: 26px;
+          top: 15px;
+        }
+      }
+    }
+  }
+
+  .col-md-4 {
+    &:last-child {
+      .autres-articles {
+        &:after {
+          content: none;
+        }
+      }
+    }
+  }
+
+  &.bg-white {
+    background: $white;
+  }
+}
+
+//map-agence
+.map-agence {
+  @include imgurl(map-bg, png);
+  padding: 30px;
+
+  img {
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    @include roboto(bolder);
+    font-size: 24.49px;
+    color: $dgreen;
+    text-align: center;
+  }
+}
+
+
+//pourquoi-details
+.pourquoi-details {
+  @include full-width;
+  top: -69px;
+
+  @include mq(max, 991) {
+    top: 0;
+  }
+
+  .service-details {
+    top: 0;
+    padding: 50px 80px 60px 80px;
+
+    @include mq(max, 991) {
+      padding: 30px;
+    }
+
+    @include mq(max, 767) {
+      padding: 30px 15px;
+    }
+
+    h3 {
+      margin-bottom: 36px;
+    }
+
+    p {
+      margin-bottom: 30px;
+    }
+
+  }
+}
+
+//pourquoi-tabs
+.pourquoi-tabs {
+  @include mq(max, 767) {
+    display: none;
+  }
+
+  ul {
+    border-bottom: none;
+    background: #006a4780;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    li {
+      @include transition(.5s);
+      display: table;
+
+      a {
+        font-size: 18px;
+        color: $white;
+        border-radius: 0;
+        border: none !important;
+        @include roboto(bold);
+        @include transition(.5s);
+        display: table-cell;
+        vertical-align: middle;
+
+        @include mq(max, 767) {
+          font-size: 15px;
+          padding: 10px 5px;
+        }
+      }
+
+      &.active, &:hover, &:active, &:focus {
+        a {
+          background: $white;
+          color: $black;
+
+          &:hover {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+
+  &.footer-tabs {
+    margin-top: 92px;
+
+    ul {
+      background: transparent;
+
+      li {
+        a {
+          color: #006a4780;
+        }
+
+        &.active, &:hover, &:active, &:focus {
+          a {
+            color: $dgreen;
+          }
+        }
+      }
+    }
+  }
+}
+
+//mb-view
+.btn-mbView {
+  display: none;
+
+  @include mq(max, 767) {
+    display: block;
+    width: 100%;
+    background: $dgreen;
+    color: $white;
+    border-radius: 0;
+    box-shadow: none !important;
+    outline: none;
+    @include roboto(mediem);
+    border: 2px solid $dgreen;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: .5s;
+
+    &:hover, &:active, &:focus {
+      background: $white;
+      color: $dgreen;
+      border: 2px solid $dgreen;
+      font-weight: 900;
+    }
+  }
+}
+
+.tab-content {
+  .panel {
+    margin-bottom: 10px;
+  }
+}
+
+//tabing-content
+.tabing-content {
+
+  @include mq(max, 767) {
+    padding-top: 30px;
+  }
+
+  p {
+    span {
+      color: $darkgray;
+      @include roboto(bolder);
+    }
+  }
+
+  .vertical-line2 {
+    left: 54px;
+
+    @include mq(max, 767) {
+      left: 14px;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      @include imgurl(vertical-arrow, png);
+      height: 19px;
+      width: 13px;
+      background-repeat: no-repeat;
+      left: -5px;
+    }
+
+    @include min-max(992, 1199) {
+
+
+    }
+    @include min-max(767, 991) {
+
+    }
+    @include mq(max, 767) {
+
+    }
+    @include mq(max, 400) {
+
+    }
+  }
+}
+
+//another-section
+.another-section {
+  padding-left: 25px;
+  margin-bottom: 75px;
+
+  p {
+    margin-bottom: 5px !important;
+  }
+
+  a {
+    color: $dgreen;
+    font-size: 18px;
+    @include roboto(bolder);
+    margin-bottom: 30px;
+    display: block;
+  }
+}
+
+
+.media-section {
+
+  &.circle-border {
+    padding: 0 40px;
+
+    @include mq(max, 767) {
+      padding: 0;
+    }
+
+
+    .media {
+      .media-left {
+        vertical-align: top;
+        padding-right: 30px;
+
+        .circle-dot {
+          position: relative;
+          width: 28px;
+          height: 28px;
+          @include border-radius(22);
+          border: 6px solid $darkgray;
+          background: $white;
+        }
+      }
+
+      .media-body {
+        h1 {
+          color: $black;
+          @include roboto(bold);
+          font-size: 30px;
+          text-transform: uppercase;
+          margin-bottom: 2px;
+        }
+
+        h5 {
+          font-size: 16px;
+          color: $lightblk;
+          @include roboto(mediem);
+          line-height: 1.5;
+          margin-bottom: 13px;
+
+          a {
+            color: $dgreen;
+            text-decoration: underline;
+            @include roboto(bold);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*=====================================================================
+==========================   Trouver-une-Agence-Page  =========================
+========================================================================*/
+//top-banner-section
+.top-banner-section {
+  @include full-width;
+  padding: 19px 0;
+  height: 123px;
+  background: $lightgray;
+
+  @include mq(max, 991) {
+    height: auto;
+  }
+}
+
+
+//loctin-agence
+.loctin-agence {
+  position: relative;
+
+  p {
+    font-size: 18px;
+    color: $lightblk;
+    @include roboto(bold);
+    margin-bottom: 10px;
+  }
+
+  .media {
+    .media-left {
+      padding-right: 20px;
+    }
+
+    .media-body {
+      vertical-align: middle;
+    }
+
+    @include mq(max, 991) {
+      position: relative;
+      z-index: 999;
+    }
+  }
+
+  a {
+    font-size: 18px;
+    color: $white;
+    @include roboto(mediem);
+    background: $dgreen;
+    @include border-radius(22);
+    padding: 5px 20px;
+    position: relative;
+    display: block;
+    width: 243px;
+    letter-spacing: 0.4px;
+    height: 40px;
+
+    @include mq(max, 767) {
+      width: 100%;
+    }
+
+  }
+
+  input {
+    border: none;
+    @include border-radius(22);
+    background: $white;
+    color: $lightblk;
+    @include roboto(normal);
+    font-size: 18px;
+    height: 40px;
+    padding-left: 22px;
+
+    &::placeholder {
+      //text-align: center;
+      @include roboto(bold);
+      color: $lightblk;
+    }
+  }
+
+  &.withoutP {
+    margin-top: 35px;
+
+    @include mq(max, 991) {
+      float: left;
+      width: 100%;
+
+      a {
+        width: 230px;
+        margin: 0 auto;
+      }
+    }
+
+    @include mq(max, 767) {
+      float: left;
+      width: 100%;
+
+      a {
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.ou {
+  position: absolute;
+  right: 12.5%;
+  top: 39%;
+  transform: translateX(-50%);
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -53px;
+    height: 45px;
+    background: $gray;
+    left: 13px;
+    width: 2px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background: $gray;
+    top: -48px;
+    left: 13px;
+    height: 40px;
+  }
+
+  h3 {
+    font-size: 22.5px;
+    @include roboto(bolder);
+  }
+
+  @include min-max(991, 1199) {
+    right: 0;
+  }
+
+  @include mq(max, 991) {
+    right: -10%;
+  }
+
+  @include mq(max, 767) {
+    position: relative;
+    left: 0;
+    right: inherit;
+    transform: translateY(-50%);
+    text-align: center;
+    margin: 30px 0;
+
+    &:before {
+      bottom: 0px;
+      height: 1px;
+      left: 0px;
+      width: 100%;
+      top: 50%;
+      z-index: 0;
+    }
+
+    &:after {
+      content: none;
+    }
+
+    h3 {
+      display: inline-block;
+      padding: 0px 15px;
+      background: $lightgray;
+      position: relative;
+      z-index: 99;
+    }
+  }
+}
+
+//address-agence
+.address-agence {
+  border-bottom: 2px solid $gray;
+  margin-bottom: 30px;
+
+  p {
+    color: $black;
+    margin-bottom: 25px;
+
+    span {
+      text-transform: uppercase;
+
+      a {
+        color: $black;
+        font-weight: 900;
+        @include transition(.5s);
+
+        &:hover {
+          color: $dgreen;
+        }
+      }
+    }
+  }
+}
+
+//grayColor-custom
+.grayColor-custom {
+  color: $lightblk !important;
+  text-transform: none !important;
+}
+
+//img-06
+.img-06 {
+  border: 2px solid $gray;
+  margin-bottom: 30px;
+}
+
+//another-add
+.another-add {
+  p {
+    @include roboto(normal);
+    font-size: 14px;
+    color: #182914;
+  }
+}
+
+//maps-located
+.maps-located {
+  @include full-width;
+  padding: 40px 0;
+
+  .media {
+    .media-left {
+      vertical-align: top;
+      padding-right: 33px;
+
+      img {
+        width: 38px;
+      }
+    }
+
+    .media-body {
+      h3 {
+        @include roboto(bold);
+        color: $dgreen;
+        text-transform: uppercase;
+        font-size: 15px;
+        margin-bottom: 8px;
+        letter-spacing: 3px;
+      }
+
+      p {
+        color: $black;
+        @include roboto(normal);
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+//map-section
+.map-section {
+  @include full-width;
+
+  img {
+    width: 100%;
+  }
+}
+
+//form-section-agence
+.form-section-agence {
+  text-align: center;
+
+  .form-group {
+    margin-bottom: 10px;
+
+    label {
+      @include roboto(normal);
+      color: $lightblk;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    input {
+      height: 41px;
+      @include border-radius(22);
+      @include roboto(normal);
+      font-size: 18px;
+      color: $lightblk;
+      padding-left: 25px;
+    }
+
+    &:last-child {
+      margin-bottom: 30px;
+    }
+  }
+
+  .btn-envoyez {
+    font-size: 16.29px;
+    color: $white;
+    @include roboto(bold);
+    padding: 11px 47px;
+    background: $dgreen;
+    @include border-radius(32);
+    transition: .5s;
+
+    &:hover {
+      background: lighten($dgreen, 5%);
+    }
+  }
+
+  //ou-horizental
+  .ou-horizental {
+    position: relative;
+
+    h3 {
+      @include roboto(bold);
+      color: $lightblk;
+      font-size: 18px;
+      text-transform: uppercase;
+      display: inline-block;
+      padding: 0 10px;
+      background: $lightgray;
+      position: relative;
+      z-index: 9;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: $gray;
+    }
+  }
+}
+
+
+/*=====================================================================
+==========================   Recherche-Page  =========================
+========================================================================*/
+
+//top-heading-recherche
+.top-heading-recherche {
+  @include full-width;
+  padding: 50px 0px 0px;
+}
+
+//recherche-page
+.recherche-page {
+  background: $gray;
+  height: auto;
+  padding: 35px 0 50px;
+
+  .loctin-agence {
+
+    p {
+      color: $lightblk;
+      font-size: 24px;
+      margin-bottom: 32px;
+      line-height: 1.3;
+      padding-right: 170px;
+
+      @include min-max(991, 1199) {
+        padding-right: 100px;
+      }
+
+      @include mq(max, 991) {
+        padding-right: 50px;
+      }
+    }
+
+    &.withoutP {
+      position: absolute;
+      bottom: -133px;
+
+      a {
+        @include min-max(991, 1199) {
+          width: 230px;
+        }
+      }
+
+      @include mq(max, 991) {
+        position: relative;
+        top: 15px;
+      }
+    }
+  }
+
+  .ou {
+    top: 47%;
+
+    &:before {
+      bottom: -96px;
+      height: 87px;
+      background: $lightblk;
+
+      @include mq(max, 767) {
+        height: 1px;
+      }
+    }
+
+    &:after {
+      background: $lightblk;
+      top: -98px;
+      height: 90px;
+    }
+
+    @include mq(max, 991) {
+      right: 0;
+    }
+
+    h3 {
+      @include mq(max, 767) {
+        background: $gray;
+      }
+    }
+  }
+}
+
+
+//addWithMap
+.addWithMap {
+  @include full-width;
+
+  .container-fluid{
+    .col-lg-6{
+      position: absolute;
+      top: 0;
+      right: 0;
+      float: right;
+
+      @include min-max(991,1199){
+        @include full-width;
+
+      }
+      @include mq(max, 991){
+        position: static;
+        float: none;
+      }
+    }
+  }
+
+}
+
+//addressContent
+.addressContent {
+  padding: 24px 0 7px;
+  border-bottom: 2px solid $gray;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  h1 {
+    @include roboto(bolder);
+    color: $lightblk;
+    font-size: 22.5px;
+    text-transform: uppercase;
+    margin-bottom: 47px;
+    padding-right: 100px;
+    letter-spacing: 1.6px;
+    line-height: 1.3;
+  }
+}
+
+//icon-address
+.icon-address {
+  .col-md-2 {
+    padding-left: 0;
+
+    @include mq(max, 991) {
+      padding-left: 15px;
+    }
+  }
+
+  .col-xs-6 {
+    @include mq(max, 400) {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+//icon-mapSect
+.icon-mapSect {
+
+  p {
+    background: $dgreen;
+    text-align: center;
+    margin-bottom: 10px;
+    color: $white;
+    border-radius: 0 22px 22px 0;
+    font-size: 15px;
+    @include roboto(normal);
+    padding: 4px 0;
+  }
+
+  img {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+//map-contentAdd
+.map-contentAdd {
+  margin-bottom: 8px;
+
+  .media {
+    .media-left {
+      padding-right: 18px;
+
+      img {
+      }
+    }
+
+    .media-body {
+      h3 {
+        font-size: 15px;
+        color: $dgreen;
+        @include roboto(bolder);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding-right: 0;
+        margin-bottom: 14px;
+        line-height: 1.2;
+      }
+
+      p {
+        font-size: 15px;
+        @include roboto(normal);
+        color: $black;
+      }
+    }
+  }
+}
+
+
+//right-mapSec
+.right-mapSec {
+  width: 100%;
+}
+
+//location-map
+.location-map {
+  a {
+    @include roboto(bold);
+    color: #182914;
+    font-size: 15px;
+
+    img {
+      display: inline;
+      padding-right: 5px;
+      margin-top: -2px;
+    }
+  }
+}
+
+
+//mp-btn
+.mp-btn {
+  display: table;
+  min-height: 76px;
+
+  &:first-child {
+    margin-bottom: 62px;
+    margin-top: 110px;
+
+    @include mq(max, 991) {
+      margin-bottom: 15px;
+      margin-top: 0;
+    }
+  }
+
+  a {
+    @include roboto(normal);
+    color: $lightblk;
+    font-size: 15px;
+    border: 3px solid $dgreen;
+    display: table-cell;
+    @include border-radius(50);
+    padding: 5px 24px;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+
+    &:first-child {
+      margin-bottom: 50px;
+    }
+
+    span {
+      text-transform: none;
+      font-weight: 900;
+
+
+    }
+  }
+
+  .media {
+    .media-left {
+      img {
+        width: auto;
+      }
+    }
+
+    .media-body {
+      vertical-align: middle;
+    }
+  }
+
+  p {
+    br {
+      @include min-max(0, 1199) {
+        display: none;
+      }
+    }
+  }
+}
+//pagenetion-text
+.pagenetion-text {
+  background: $lightgray;
+  @include full-width;
+  padding: 30px 0px;
+  .pagination-section {
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    a {
+      background: transparent;
+    }
+  }
+}
+
+//textP
+.textP {
+  text-align: center;
+
+  a {
+    color: $lightblk;
+    @include roboto(bolder);
+    font-size: 15px;
+  }
+}

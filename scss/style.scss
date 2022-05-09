@@ -1,0 +1,118 @@
+//import-style/font-cdn-link
+@import "variable";
+@import "mixin";
+@import "https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap";
+@import "https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap";
+
+/*=====================================================================
+==========================   main-css-all-pages  =========================
+========================================================================*/
+
+body {
+  margin: 0;
+  padding: 0;
+  @include full-width;
+  @include roboto(normal);
+  font-size: 18px;
+  color: $lightblk;
+}
+
+//container
+@media (min-width: 1200px) {
+  .container {
+    width: 1110px;
+  }
+}
+
+.container-flex{
+  @include mq(min, 1440){
+    width: 1510px;
+  }
+}
+
+.box-counter, .artical-boxSmall{
+  .container{
+    overflow: hidden;
+  }
+}
+
+
+a, a:hover, a:active, a:focus, a:link, a:visited {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p, h1, h2, h3, h4, h5, h6, li, ul {
+  margin: 0;
+  padding: 0;
+}
+
+@include mq(max, 767){
+  h2{
+    font-size: 24px;
+  }
+  h3{
+    font-size: 20px;
+  }
+
+  p, li, a{
+    font-size:15px;
+  }
+}
+
+@include mq(max, 375){
+  h2{
+    font-size: 20px;
+  }
+  h3{
+    font-size: 15px;
+  }
+
+  p, li, a{
+    font-size:12px;
+  }
+}
+
+//vertical-center
+.vertical-block {
+  display: table;
+  height: 100%;
+  width: 100%;
+  float: left;
+  .cell {
+    vertical-align: middle;
+    display: table-cell;
+  }
+}
+
+//strong
+strong{
+  font-weight: 900!important;
+}
+
+//delete text
+del {
+  text-decoration: line-through;
+}
+
+@include scrollbars(10, $dgreen, $gray);
+
+//import-scss
+@import "header-footer";
+//home-page-scss
+@import "home";
+//services-page-scss
+@import "services";
+//services-page-scss
+@import "services-personne";
+//simulateurs-page-scss
+@import "simulateurs";
+//pers-canddate-page-scss
+@import "pers-candidate";
+//all-pages-scss
+@import "pages";

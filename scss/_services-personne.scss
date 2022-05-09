@@ -1,0 +1,232 @@
+.services-personne {
+  @include full-width;
+  background: $lightgray;
+  padding-bottom: 65px;
+
+  .services-sidbar ul li a {
+    padding: 12px 0px;
+  }
+
+  .box-gradient {
+    height: 184px;
+
+    &.bradius-tl {
+      border-radius: 28px 0 28px 0;
+    }
+
+    &.bradius-lb {
+      border-radius: 0 28px 0 28px;
+    }
+
+    .cell-center {
+      padding: 0 24px;
+
+      p {
+        font-size: 16.29px;
+        letter-spacing: 0;
+      }
+
+      img {
+        margin: 0 auto 25px;
+      }
+    }
+  }
+
+  .servic-content-small {
+    min-height: 186px;
+  }
+
+  //en-savoir-plus
+  .en-savoir-plus {
+    margin: 26px auto 0;
+  }
+
+  //.services-sidbar
+  .services-sidbar {
+    margin-bottom: 84px;
+  }
+}
+
+.service-details {
+  h3.gray-color {
+    color: $lightblk;
+  }
+
+  h3.darkgray-color{
+    color: $darkgray;
+  }
+}
+
+
+//box-all-service
+.box-all-service {
+  margin-bottom: 50px;
+}
+
+//service-details
+.service-details {
+  p {
+    em {
+      span {
+        color: $brown;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+      }
+    }
+  }
+
+  ul {
+    margin: 0 30px 30px;
+  }
+}
+
+
+//point-service
+.point-service {
+  @include full-width;
+
+  .row {
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      @include transform(translateY(-50%));
+      width: 2px;
+      bottom: 0;
+      background: $lightblk;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    padding: 9px 15px;
+    font-size: 16px;
+    color: $white;
+    @include roboto(bold);
+    display: block;
+    background: $darkgray;
+    position: relative;
+    z-index: 0;
+
+    &:nth-child(2) {
+      margin-bottom: 25px;
+    }
+  }
+
+  .text-point {
+    padding: 15px 0px 0px;
+    position: relative;
+    margin-bottom: 30px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      @include transform(translateX(-50%));
+      background: $lightblk;
+      height: 99%;
+      width: 2px;
+      top: 0;
+
+      @include mq(max, 767) {
+        left: 15px;
+      }
+    }
+
+    h3 {
+      font-size: 16px;
+      color: $lightblk;
+      @include roboto(bold);
+      text-transform: none;
+      margin-bottom: 25px;
+      position: relative;
+
+      @include mq(max, 767) {
+        padding-left: 70px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: $darkgray;
+        @include border-radius(22);
+        top: 4px;
+        border: 1px solid $white;
+
+        @include mq(max, 767) {
+          left: 10px;
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 41px;
+        height: 2px;
+        background: $lightblk;
+        top: 8px;
+
+        @include mq(max, 767) {
+          left: 20px;
+        }
+      }
+
+      &:nth-child(even) {
+        text-align: left;
+        left: 59.5%;
+
+        &:before {
+          left: -10.3%;
+        }
+
+        &:after {
+          left: -54px;
+        }
+
+        @include mq(max, 767) {
+          text-align: left;
+          left: inherit;
+
+          &:after{
+            left: 20px;
+          }
+
+          &:before{
+            left: 10px;
+          }
+        }
+      }
+
+      &:nth-child(odd) {
+        text-align: right;
+        right: 59.5%;
+
+        &:before {
+          right: -10.2%;
+        }
+
+        &:after {
+          right: -54px;
+        }
+
+        @include mq(max, 767) {
+          text-align: left;
+          right: inherit;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    h2 {
+      margin-bottom: 25px;
+    }
+  }
+}
